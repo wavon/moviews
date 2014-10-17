@@ -1,21 +1,6 @@
-/* Page Styles
-================================ */
+/* Colors
+================================
 
-* {
-  -moz-box-sizing: border-box;  
-  box-sizing: border-box;
-}
-body {
-  font-family: Raleway, sans-serif;
-  font-weight: 300;
-  font-size: 1em/1.5;
-  color: #222;
-}
-
-/* Layout Element Colors
-================================ */
-
-/* 
 dark blue 
 #0D7EAD
 13, 126, 173
@@ -37,46 +22,21 @@ vanilla
 253 255 222
 */
 
-.main-content {
-  position: relative;
-}
-
-header {
-  padding: 0;
-}
-
-section {
-  width: 60%;
-  right: 0;
-}
-
-/* Headings and Styles
+/* General Page Styles
 ================================ */
-.main-logo {
-  width: 100px;
-  background-color: rgb(253,255,222);
-  padding: 10px;
-  border-radius: 6px;
+
+* {
+  -moz-box-sizing: border-box;  
+  box-sizing: border-box;
 }
 
-.main-logo img {
-  width: 100%;
+body {
+  font-family: Raleway, sans-serif;
+  font-weight: 300;
+  font-size: 1em/1.6;
+  color: #222;
+  background-color: rgba(253,255,222,.2);
 }
-
-.title-logo img {
-  width: 100%;
-}
-
-/* Font replaced by animated gif
-
-header h1 {
-  font-family: Raleway;
-  font-size: 3em;
-  font-weight: 900;
-  color: #0D7EAD;
-  text-transform: uppercase;
-}
-*/
 
 .movie-title {
   font-family: Raleway;
@@ -93,16 +53,59 @@ p {
   margin-top: 10px;
 }
 
+/* Header, Banner, Logo and Page Title
+================================ */
+
+.main-header {
+  background-color: rgba(253,255,222,.5);
+  padding: 15px 15px 10px 15px;
+  overflow: hidden;
+}
+
+.main-logo {
+  text-align: center;
+}
+
+.main-logo img {
+  width: 100px;
+  height: 69px;
+}
+
+.title-logo {
+  display: block;
+  margin: 0 auto;
+}
+
+.title-logo img {
+  width: 100%;
+  max-width: 400px;
+  display: block;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.main-footer {
+  text-align: center;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  font-size: .9em;
+  background-color: #0D7EAD;
+  clear: both;
+}
+
+footer p {
+  color: #FDFFDE;
+  }
+
 /* Navigation and menus
 ================================ */
 
 /* genre navigation */
-
-.genre-nav ul {
-  display: inline-block;
-}
-.genre-nav li {
+.genre-nav {
   display: block;
+}
+  
+.genre-nav li {
   font-size: 1.2em;
   font-weight: 500;
   text-transform: uppercase;
@@ -110,21 +113,23 @@ p {
   text-decoration: none;
   text-align: center;
   background-color: #DDC100;
-  padding: 5px 10px;
-  border-radius: 5px;
+  padding: 7px 10px;
+  border-radius: 6px;
   cursor: pointer;
+  margin-top: 10px;
 }
 /* selected state */
-.genre-nav li:active {
+.genre-nav li:hover {
   background-color: #4BACD6;
 }
 
 /* page navigation */
 
 .main-nav {
-  width: 15%;
+  width: 130px;
   padding: 10px;
   background-color: rgba(215,245,250,.6);
+  float: left;
 }
 
 .main-nav li {
@@ -140,56 +145,43 @@ p {
   padding: 12px;
 }
 
-/* toggle ul styles */
-.toggle-menu ul {
-  display: inline-block;
+.main-nav a:hover {
+  color: #0D7EAD;
 }
 
-/* toggle link styles */
-#spoiler-toggle,
-#newListing-toggle {
+.main-nav a:active {
+  color: #0D7EAD;
+  font-weight: 700;
+}
+
+/* toggle ul styles */
+.toggle-menu {
+  display: block;
+}
+.toggle-menu li {
+  margin-right: 15px;
+  display: inline;
   font-size: 1.2em;
   font-weight: 600;
   text-transform: uppercase;
   color: #DDC100;
-  display: block;
+  line-height: 2em;
   cursor: pointer;
 }
 
-
-/* Header, Section and Footer Layout
+/* Info - date, rating and genre
 ================================ */
 
-.main-header {
-  min-height: 100px;
-  overflow: hidden;
-}
-
-
-
-.movie-info ul {
-  position: relative;
-  margin-top: 18px;
+.movie-info {
+  margin-top: 10px;
 }
 .movie-info li {
   display: inline-block;
   color: #DDC100;
   font-size: 1.2em;
-  font-weight: 400;
-}
-
-.genre {
-  right: 0;
-}
-
-.main-footer {
-  text-align: center;
-  padding-top: 5px;
-  padding-bottom: 5px;
-}
-
-.main-footer p {
-  font-size: .9em;
+  font-weight: 600;
+  text-transform: uppercase;
+  margin-right: 60px;
 }
 
 /* Float Clearfix
@@ -204,33 +196,77 @@ p {
 /* Media Queries
 ================================ */
 
-@media (min-width: 769px) {
+@media (min-width: 550px) {
 
-  .main-wrapper {
-    width: 96%;
-    margin: auto;
-  }
-
-  /* Header, Section and Footer Layout
-  ================================ */
-
-  }
   .main-logo {
-    width: 150px;
+    display: inline;
+  }
+  .title-logo {
+    max-width: 400px;
+    display: inline;
+  }
+  .title-logo img {
+    display: inline;
+    width: 400px;
+    height: 72px;
+    margin-left: 15px;
+  }
+  /* main nav needs different layout */
+  .main-nav {
+
+  }
+  .main-content {
+    width: 96%;
+    margin: 0 auto;
+  }
+}
+
+@media (min-width: 669px) {
+  .main-content {
+    max-width: 1000px;
+    width: initial;
+    margin: initial;
+  }
+  .title-logo,
+  .genre-nav,
+  .toggle-menu {
+    position: relative;
+  }
+  .main-logo img {
+    width: 130px;
+    height: 90px;
+  }
+  .title-logo {
+    left: 0px;
+    top: -18px;
   }
   .genre-nav {
-    bottom: 32px;
-    left: 200px;
+    left: 145px;
+    top: -18px;
+    margin-top: 0;
   }
   .genre-nav li {
     margin-right: 6px;
     margin-left: 6px;
     display: inline-block;
   }
-
+  .toggle-menu {
+    display: inline-block;
+    left: 160px;
+    top: -10px;
+    margin: 0;
+  }
   #movie-list {
-    width: 70%;
-    right: 0;
+    max-width: 80%;
+    float: left;
+    margin-left: 35px;
   }
 
+}
+
+@media (min-width: 861px) {
+  .toggle-menu {
+    left: 660px;
+    top: -52px;
+  }
 }
