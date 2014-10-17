@@ -38,6 +38,11 @@ body {
   background-color: rgba(253,255,222,.2);
 }
 
+.main-content {
+    width: 96%;
+    margin: 0 auto;
+  }
+
 .movie-title {
   font-family: Raleway;
   font-weight: 500;
@@ -57,7 +62,7 @@ p {
 ================================ */
 
 .main-header {
-  background-color: rgba(253,255,222,.5);
+  background-color: rgb(253,255,222);
   padding: 15px 15px 10px 15px;
   overflow: hidden;
 }
@@ -92,6 +97,9 @@ p {
   background-color: #0D7EAD;
   clear: both;
 }
+.spoiler {
+  color: #4BACD6;
+}
 
 footer p {
   color: #FDFFDE;
@@ -105,18 +113,18 @@ footer p {
   display: block;
 }
   
-.genre-nav li {
+.genre-nav button {
+  border: none;
   font-size: 1.2em;
   font-weight: 500;
   text-transform: uppercase;
   color: white;
-  text-decoration: none;
-  text-align: center;
   background-color: #DDC100;
-  padding: 7px 10px;
+  padding: 6px;
   border-radius: 6px;
-  cursor: pointer;
   margin-top: 10px;
+  margin-right: 10px;
+  width: 100%;
 }
 /* selected state */
 .genre-nav li:hover {
@@ -147,6 +155,7 @@ footer p {
 
 .main-nav a:hover {
   color: #0D7EAD;
+  font-weight: 700;
 }
 
 .main-nav a:active {
@@ -154,19 +163,21 @@ footer p {
   font-weight: 700;
 }
 
-/* toggle ul styles */
-.toggle-menu {
-  display: block;
-}
-.toggle-menu li {
+.toggle-menu button {
+  border: none;
+  background-color: rgb(215,245,250);
   margin-right: 15px;
   display: inline;
   font-size: 1.2em;
   font-weight: 600;
   text-transform: uppercase;
-  color: #DDC100;
-  line-height: 2em;
-  cursor: pointer;
+  color: #4BACD6;
+  padding: 6px;
+  border-radius: 5px;
+} 
+.toggle-menu button:hover {
+  color: #0D7EAD;
+  font-weight: 700;
 }
 
 /* Info - date, rating and genre
@@ -211,22 +222,19 @@ footer p {
     height: 72px;
     margin-left: 15px;
   }
-  /* main nav needs different layout */
+
+  .genre-nav button {
+    width: initial;
+  }
+  /* main nav needs different layout for narrow width */
   .main-nav {
 
   }
-  .main-content {
-    width: 96%;
-    margin: 0 auto;
-  }
+  
 }
 
 @media (min-width: 669px) {
-  .main-content {
-    max-width: 1000px;
-    width: initial;
-    margin: initial;
-  }
+
   .title-logo,
   .genre-nav,
   .toggle-menu {
@@ -252,21 +260,22 @@ footer p {
   }
   .toggle-menu {
     display: inline-block;
-    left: 160px;
-    top: -10px;
+    left: 150px;
+    top: -5px;
     margin: 0;
-  }
-  #movie-list {
-    max-width: 80%;
-    float: left;
-    margin-left: 35px;
   }
 
 }
 
 @media (min-width: 861px) {
+
   .toggle-menu {
-    left: 660px;
+    left: 640px;
     top: -52px;
+  }
+  #movie-list {
+    max-width: 80%;
+    float: left;
+    margin-left: 35px;
   }
 }
