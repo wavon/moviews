@@ -40,16 +40,31 @@ body {
 
 .main-content {
     width: 96%;
-    margin: 0 auto;
+    height: 100%;
+    margin: 0 auto 0 0;
+    max-width: 1000px;
   }
 
+h1,
 .movie-title {
-  font-family: Raleway;
+  font-family: Raleway, sans-serif;
   font-weight: 500;
   font-size: 1.8em;
   color: #0D7EAD;
   margin-top: 24px;
   margin-bottom: 10px;
+}
+
+h2 {
+  font-family: Raleway, sans-serif;
+  font-weight: 500;
+  font-size: 1.4em;
+  color: #4BACD6;
+  margin-top: 36px;
+}
+
+h1 + h2 {
+  margin-top: 60px;
 }
 
 p {
@@ -109,6 +124,12 @@ footer p {
 ================================ */
 
 /* genre navigation */
+
+/* turn off the glow around acive buttons */
+button {
+  outline: none;
+} 
+/* genre selection buttons */
 .genre-nav {
   display: block;
 }
@@ -126,31 +147,42 @@ footer p {
   margin-right: 10px;
   width: 100%;
 }
-/* selected state */
-.genre-nav li:hover {
+
+.genre-nav button:active {
   background-color: #4BACD6;
 }
 
-/* page navigation */
+/* main page navigation links */
+
+#home .home, 
+#about .about, 
+#careers .careers {
+  background-color: #FFF;
+}
+#home nav .home > a,
+#about nav .about > a,
+#careers nav .careers > a {
+  pointer-events: none;
+  cursor: default;
+}
 
 .main-nav {
   width: 130px;
-  padding: 10px;
   background-color: rgba(215,245,250,.6);
   float: left;
 }
 
 .main-nav li {
-  line-height: 2em;
+  margin: 1em 0 1em 0;
 }
 
 .main-nav a {
   font-size: 1.2em;
-  font-weight: 600;
+  font-weight: 500;
   color: #4BACD6;
   text-transform: uppercase;
   text-decoration: none;
-  padding: 12px;
+  padding: 3px 6px 3px 20px;
 }
 
 .main-nav a:hover {
@@ -169,15 +201,21 @@ footer p {
   margin-right: 15px;
   display: inline;
   font-size: 1.2em;
-  font-weight: 600;
+  font-weight: 500;
   text-transform: uppercase;
   color: #4BACD6;
   padding: 6px;
-  border-radius: 5px;
+  border-radius: 6px;
 } 
-.toggle-menu button:hover {
-  color: #0D7EAD;
-  font-weight: 700;
+
+.toggle-menu button:active {
+  background-color: #4BACD6;
+  color: #FFF;
+  font-weight: 600;
+}
+
+.hidden {
+  background-color: #0D7EAD;
 }
 
 /* Info - date, rating and genre
@@ -249,7 +287,7 @@ footer p {
     top: -18px;
   }
   .genre-nav {
-    left: 145px;
+    left: 150px;
     top: -18px;
     margin-top: 0;
   }
@@ -273,9 +311,11 @@ footer p {
     left: 640px;
     top: -52px;
   }
-  #movie-list {
+
+  section {
     max-width: 80%;
     float: left;
     margin-left: 35px;
+    margin-bottom: 24px;
   }
 }
