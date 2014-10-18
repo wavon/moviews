@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="css/style.css">
   <link href='http://fonts.googleapis.com/css?family=Raleway:400,200,300,100,500,600,700' rel='stylesheet' type='text/css'>
 </head>
-<body>
+<body id="home">
   <div class="main-wrapper">
   <header class="main-header">
     <div class="main-logo"><a href="index.html"><img src="img/logo_eye.png" alt="logo" /></a>
@@ -19,7 +19,7 @@
       <button value="drama-genre">Drama</button>
       <button value="family-genre">Family</button>
       <button value="scifi-genre">Sci-Fi</button>
-      <button>All</button>
+      <!-- <button value="all-genre">All</button> -->
     </div>
     <div class="toggle-menu">
       <button id="spoiler-toggle">Spoilers</button></li>
@@ -29,9 +29,9 @@
     <div class="main-content">
       <nav class="main-nav">
         <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="careers.html">Careers</a></li>
+          <li><a class="home" href="index.html">Home</a></li>
+          <li><a class="about" href="about.html">About</a></li>
+          <li><a class="careers" href="careers.html">Careers</a></li>
         </ul>
       </nav>
       <div id="newMovieForm"><!-- form --></div>
@@ -81,11 +81,12 @@
         </div>
       </section>
     </div>
-    <footer class="main-footer">
-      <p>&copy;2014 Moviews Reviewers</p>
-    </footer>
+  <footer class="main-footer">
+    <p>&copy;2014 Moviews Reviewers</p>
+  </footer>
   </div>
-  <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+  <!-- Can use download for local testing <script src="js/jquery-1.11.1.min.js"></script> -->
+  <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
   <script src="js/app.js" type="text/javascript" charset="utf-8"></script>
 </body>
 </html>
