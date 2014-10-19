@@ -214,8 +214,8 @@ button {
   font-weight: 600;
 }
 
-.hidden {
-  background-color: #0D7EAD;
+.selected {
+  background-color: #4BACD6;
 }
 
 /* Info - date, rating and genre
