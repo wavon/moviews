@@ -1,12 +1,13 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>STAR RATING!</title>
-  <link rel="stylesheet" href="css/style.css" type="text/css" media="screen" title="no title" charset="utf-8">
+  <title>New Movie Form</title>
+  <link rel="stylesheet" href="css/formstyles.css" type="text/css" media="screen" title="no title" charset="utf-8">
   <link href='http://fonts.googleapis.com/css?family=Arvo:400,700,400italic,700italic|Raleway:400,200,300,100,500,600,700' rel='stylesheet' type='text/css'>
 </head>
+
 <body>
-  
+<h2> New movie review form </h2> 
 <form action="#">
   <div id="new-movie-form">
     <label for="title">Title:</label>
@@ -15,17 +16,20 @@
     <label for="year">Year:</label>
     <input type="text" name="year" id="year" placeholder="" class="shorttaskfield"/>
     
+    <label for="rating">Rating:</label>
+    <input type="text" name="rating" id="rating" placeholder="1-5" class="shorttaskfield"/>
+    
     <label for="genre">Genre:</label>
     <input type="text" name="genre" id="genre" placeholder="" class="shorttaskfield"/>
-    
-     <label for="rating">Rating:</label>
-    <input type="text" name="rating" id="rating" placeholder="1-5" class="shorttaskfield"/>
     <br>
+ 
     
  <form id="ratingForm">
 
     <div class="newLine"></div>
 </form>
+
+
     <label for="description">Description:</label>
     <input type="text" name="description" id="description" placeholder="" class="longtaskfield"/>
     <br>
@@ -47,7 +51,7 @@
   
   
   <script src="http://code.jquery.com/jquery-1.11.0.min.js" type="text/javascript" charset="utf-8"></script>
-  <script src="js/app.js" type="text/javascript" charset="utf-8"></script>
+  <script src="js/formapp.js" type="text/javascript" charset="utf-8"></script>
   
 </body>
 </html>
