@@ -1,0 +1,156 @@
+#new-movie-form {
+  font-family: 'Raleway', sans-serif;
+  font-weight: 800;
+  font-size: .8em;
+  text-transform: uppercase;
+  
+}
+
+
+
+#title #genre #year #description #spoilerparagraph {
+  font-family: 'Raleway', sans-serif;
+  font-size: .8em;
+  line-height: 1.2em;
+  border: none;
+}
+
+#description {
+  font-family: serif;
+}
+
+
+#theList {
+  font-family: sans-serif;
+  list-style: none;
+  display: inline-block;
+  
+}
+
+h1 {
+  font-family: Raleway, sans-serif;
+  font-weight: 500;
+  font-size: 1.8em;
+  color: #0D7EAD;
+  margin-top: 24px;
+  margin-bottom: 10px;
+}
+
+p {
+  font-size: 1em;
+  line-height: 1.6em;
+  margin-top: 10px;
+}
+
+.genre {
+  font-size: 2em;
+}
+
+.year {
+  font-size: 2em;
+}
+
+.description {
+  font-size: 1em;
+}
+
+.spoiler {
+  font-size: .4em;
+}
+
+.shorttaskfield {
+  width: 19em;
+  height: 2em;
+}
+
+.longtaskfield {
+  width: 40em;
+  height: 20em;
+  white-space: wrap;
+}
+
+
+
+/*STAR RATING FORM*/
+.rating {
+    float: left;
+    border: none;
+}
+
+.rating:not(:checked) > input {
+    position: absolute;
+    top: -9999px;
+    clip: rect(0,0,0,0);
+}
+
+/* ORIGINAL STAR COLOR */
+.rating:not(:checked) > label {
+    float: right;
+    width: 1em;
+    padding: 0 .1em;
+    overflow: hidden;
+    white-space: nowrap;
+    cursor: pointer;
+    font-size: 1.5em;
+    line-height: 1em;
+    color: #FFE465;
+    text-shadow: none;
+}
+
+.rating:not(:checked) > label:before {
+    content: '★ ';
+}
+
+
+/*CHECKED COLOR WHEN YOU ARE NOT HOVERING*/
+.rating > input:checked ~ label {
+    color: #00C8E9;
+    text-shadow: 1px 1px #c60, 2px 2px #940, .1em .1em .2em rgba(0,0,0,.5);
+}
+
+/*HOVER COLOR*/
+.rating:not(:checked) > label:hover,
+.rating:not(:checked) > label:hover ~ label {
+    color: #FFD838;
+    text-shadow: .5px 1px goldenrod, 2px 2px #B57340, .1em .1em .2em rgba(0,0,0,.5);
+}
+
+
+/*ROLLOVER COLOR WHEN OTHER STARS ARE ALREADY CHECKED*/
+.rating > input:checked ~ label:hover,
+.rating > input:checked ~ label:hover ~ label,
+.rating > label:hover ~ input:checked ~ label {
+    color: #16DEFF;
+    text-shadow: 1px 1px goldenrod, 2px 2px #B57340, .1em .1em .2em rgba(0,0,0,.5);
+}
+
+.rating > label:active {
+    position: relative;
+    top: 2px;
+    left: 2px;
+}
+
+
+.newLine:before,
+.newLine:after {
+    content: " "; 
+    display: table; 
+}
+
+.newLine:after {
+    clear: both;
+}
+
+
+.submitRating {
+    margin: 5px 0 0 20px;
+    font-family: 'Arvo', sans-serif;
+    font-weight: 700;
+    color: #386AB2;
+    padding: 5px;
+    background-color: #FFF7CF;
+    border-color: #B2AE99;
+    border-width: .09em;
+    cursor: pointer;
+
+}
